@@ -1,4 +1,4 @@
-﻿namespace Hapoalim.CreditRatings
+﻿namespace MyApp
 {
   using System;
   using System.IO;

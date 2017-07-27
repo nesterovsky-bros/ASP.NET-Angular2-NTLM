@@ -1,10 +1,10 @@
-import { CreditRatings_ClientPage } from './app.po';
+﻿import { MyApp_ClientPage } from './app.po';
 
 describe('credit-ratings.client App', () => {
-  let page: CreditRatings_ClientPage;
+  let page: MyApp_ClientPage;
 
   beforeEach(() => {
-    page = new CreditRatings_ClientPage();
+    page = new MyApp_ClientPage();
   });
 
   it('should display message saying app works', () => {

@@ -1,4 +1,4 @@
-﻿namespace Hapoalim.CreditRatings
+﻿namespace MyApp
 {
   using System.IO;
   using Microsoft.AspNetCore.Hosting;

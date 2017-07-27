@@ -1,6 +1,6 @@
-import { browser, element, by } from 'protractor';
+﻿import { browser, element, by } from 'protractor';
 
-export class CreditRatings_ClientPage {
+export class MyApp_ClientPage {
   navigateTo() {
     return browser.get('/');
   }
