@@ -42,14 +42,22 @@
       loggerFactory.AddConsole(Configuration.GetSection("Logging"));
       loggerFactory.AddDebug();
 
-      app.UseApplicationInsightsRequestTelemetry();
-
-      app.UseApplicationInsightsExceptionTelemetry();
-
       app.UseCors(
         builder => builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
-      app.UseStaticFiles();
+      if (env.IsEnvironment("Development"))
+      {
+        app.UseStaticFiles(
+          new StaticFileOptions
+          {
+            FileProvider = new UrlFileProvider(
+              Configuration.GetValue<string>("UrlFileProvider.BaseUrl"))
+          });
+      }
+      else
+      {
+        app.UseStaticFiles();
+      }
 
       app.UseMvc();
     }
